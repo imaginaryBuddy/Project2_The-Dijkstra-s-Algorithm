@@ -45,5 +45,5 @@ while not Empty(Q) {
 }
 ```
 ## Reference
-https://www.youtube.com/watch?v=XB4MIexjvY0&t=821s
-Computer Algorithms - Baase Van Gelder
+- https://www.youtube.com/watch?v=XB4MIexjvY0&t=821s
+- Computer Algorithms - Baase Van Gelder
