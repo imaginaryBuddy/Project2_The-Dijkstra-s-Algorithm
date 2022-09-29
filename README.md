@@ -38,12 +38,50 @@ while not Empty(Q) {
 				// update the estimated distance to a shorter one 
 				d[v] = d[u] + w[u,v];
 				// update its predecessor
-				pi[v] = u; 
+				pi[v] = u; 	
+				Add back updated node v with its d[v] to queue;
+				
 				
 		}
 	}
 }
 ```
+
+## Q1) 
+### First Approach: 
+Directly use d[v] (the array containing the estimate distances) as queue. use pointer to search for the smallest valued node each time. 
+```py
+# ... some steps to make q[v] = INFINITE if already in solution set (pseudocode in py) 
+
+For each time I need to get the min: O(n) 
+	i = 0
+	minNode = INFINITE 
+	while (i < len(g)): O(n) 
+		minNode = min(minNode, q[i]) 
+		i+=1
+
+tight worst bound: O(n^2) 
+	
+```
+
+### Second Approach: 
+Use a sorted array each time. Will this be better? 
+
+```py
+# use external array 
+# sort the initial array 
+insertionSort array O(n^2) 
+To take out from array queue: O(1) 
+To insert value into array queue: 
+binary search the sorted array O(logn) + O(1) 
+shift the values after each insertion O(n) 
+
+approx: O(n*(logn + 1 + n) + n^2/2) 
+```
+
+The second approach will be more time efficient for large because nlogn + n^2/2 < n^2 
+
+
 ## Reference
 - https://www.youtube.com/watch?v=XB4MIexjvY0&t=821s
 - Computer Algorithms - Baase Van Gelder
