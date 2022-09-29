@@ -5,7 +5,7 @@ An algorithm that finds the shortest path from source to goal node.
 
 Key points: 
 - Only works for non-negative weights 
-- Works for both undirected and directed (convert directed to undirected by adding two directions) 
+- Works for both undirected and directed (convert undirected to directed by adding two directions) 
 
 ## Pseudocode with comments
 
